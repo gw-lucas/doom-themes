@@ -392,11 +392,11 @@
     ;; (cider-reader-conditional-face :inherit 'font-lock-comment-face)
     (cider-error-highlight-face
      `((((supports :underline (:style wave)))
-        (:inherit unspecified :underline (:style wave :color ,(car error))))
+	(:inherit unspecified :underline (:style wave :color ,(car error))))
        (t (:inherit font-lock-warning-face :underline t))))
     (cider-warning-highlight-face
      `((((supports :underline (:style wave)))
-        (:underline (:style wave :color ,(car warning)) :inherit unspecified))
+	(:underline (:style wave :color ,(car warning)) :inherit unspecified))
        (t (:inherit font-lock-warning-face :underline (:color ,(car warning))))))
     (cider-test-failure-face :background (doom-blend bg error 0.7))
     (cider-test-error-face   :background orange)
@@ -526,7 +526,7 @@
     (elfeed-search-unread-title-face :foreground fg :weight 'bold)
     ;;;; elixir-mode <modes:elixir-mode>
     (elixir-atom-face (&light :foreground dark-blue)
-                      (&dark  :foreground cyan))
+		      (&dark  :foreground cyan))
     (elixir-attribute-face :foreground violet)
     ;;;; elscreen
     (elscreen-tab-background-face     :background bg)
@@ -761,10 +761,9 @@
     ;; (hi-black-b  :weight 'bold)
     ;; (hi-black-hb :inherit 'variable-pitch :weight 'bold :height 1.67)
     ;;;; hideshow <built-in>
-    (+fold-hideshow-folded-face  ; this is defined in Doom Emacs, only
-     :inherit 'font-lock-comment-face
-     :weight 'light
-     :background (doom-darken bg 0.15))
+    (+fold-hideshow-folded-face :inherit 'font-lock-comment-face
+				:weight 'light
+				:background (doom-darken bg 0.125))
     ;;;; highlight-numbers-mode
     (highlight-numbers-number :inherit 'bold :foreground numbers)
     ;;;; highlight-indentation-mode
@@ -937,7 +936,7 @@
     (magit-dimmed :foreground fg-alt)
     (magit-hash :foreground comments)
     (magit-header-line :background dark-blue :foreground base8 :weight 'bold
-                       :box `(:line-width 3 :color ,dark-blue))
+		       :box `(:line-width 3 :color ,dark-blue))
     (magit-filename :foreground violet)
     (magit-log-author :foreground orange)
     (magit-log-date :foreground blue)
@@ -1159,7 +1158,7 @@
     (lsp-ui-sideline-code-action :foreground (doom-blend highlight bg 0.85))
     (lsp-ui-sideline-current-symbol :inherit 'highlight)
     (lsp-ui-sideline-symbol-info :foreground (doom-blend comments bg 0.85)
-                                 :background bg-alt :extend t)
+				 :background bg-alt :extend t)
     ;;;; objed
     (objed-mode-line :inherit 'warning :weight 'bold)
     (objed-hl        :inherit 'region :background (doom-blend region bg 0.5))
@@ -1376,7 +1375,7 @@
     ;;;; spell-fu
     (spell-fu-incorrect-face
      `((((supports :underline (:style wave)))
-        (:underline (:style wave :color ,(car error))))
+	(:underline (:style wave :color ,(car error))))
        (t (:inherit error :underline t))))
     ;;;; stripe-buffer
     (stripe-highlight
@@ -1547,7 +1546,7 @@
     (widget-documentation  :foreground green)
     (widget-single-line-field :background base3 :distant-foreground bg)
     (widget-field :background base3 :distant-foreground bg
-                  :box `(:line-width -1 :color ,grey) :extend t)
+		  :box `(:line-width -1 :color ,grey) :extend t)
     ;;;; window-divider
     (window-divider :inherit 'vertical-border)
     (window-divider-first-pixel :inherit 'window-divider)
@@ -1578,7 +1577,7 @@
     ((xref-line-number &inherit compilation-line-number))
     ((xref-match &inherit match)))
     ;;;; --- END Package faces ------------------
-    
+
   "TODO")
 
 ;;;; --- Package variables ------------------
@@ -1609,23 +1608,23 @@
     ;;;; vc <built-in>
     (vc-annotate-color-map
      `(list (cons 20  ,(doom-color 'green))
-            (cons 40  ,(doom-blend 'yellow 'green (/ 1.0 3)))
-            (cons 60  ,(doom-blend 'yellow 'green (/ 2.0 3)))
-            (cons 80  ,(doom-color 'yellow))
-            (cons 100 ,(doom-blend 'orange 'yellow (/ 1.0 3)))
-            (cons 120 ,(doom-blend 'orange 'yellow (/ 2.0 3)))
-            (cons 140 ,(doom-color 'orange))
-            (cons 160 ,(doom-blend 'magenta 'orange (/ 1.0 3)))
-            (cons 180 ,(doom-blend 'magenta 'orange (/ 2.0 3)))
-            (cons 200 ,(doom-color 'magenta))
-            (cons 220 ,(doom-blend 'red 'magenta (/ 1.0 3)))
-            (cons 240 ,(doom-blend 'red 'magenta (/ 2.0 3)))
-            (cons 260 ,(doom-color 'red))
-            (cons 280 ,(doom-blend 'grey 'red (/ 1.0 4)))
-            (cons 300 ,(doom-blend 'grey 'red (/ 2.0 4)))
-            (cons 320 ,(doom-blend 'grey 'red (/ 3.0 4)))
-            (cons 340 ,(doom-color 'base5))
-            (cons 360 ,(doom-color 'base5))))
+	    (cons 40  ,(doom-blend 'yellow 'green (/ 1.0 3)))
+	    (cons 60  ,(doom-blend 'yellow 'green (/ 2.0 3)))
+	    (cons 80  ,(doom-color 'yellow))
+	    (cons 100 ,(doom-blend 'orange 'yellow (/ 1.0 3)))
+	    (cons 120 ,(doom-blend 'orange 'yellow (/ 2.0 3)))
+	    (cons 140 ,(doom-color 'orange))
+	    (cons 160 ,(doom-blend 'magenta 'orange (/ 1.0 3)))
+	    (cons 180 ,(doom-blend 'magenta 'orange (/ 2.0 3)))
+	    (cons 200 ,(doom-color 'magenta))
+	    (cons 220 ,(doom-blend 'red 'magenta (/ 1.0 3)))
+	    (cons 240 ,(doom-blend 'red 'magenta (/ 2.0 3)))
+	    (cons 260 ,(doom-color 'red))
+	    (cons 280 ,(doom-blend 'grey 'red (/ 1.0 4)))
+	    (cons 300 ,(doom-blend 'grey 'red (/ 2.0 4)))
+	    (cons 320 ,(doom-blend 'grey 'red (/ 3.0 4)))
+	    (cons 340 ,(doom-color 'base5))
+	    (cons 360 ,(doom-color 'base5))))
     (vc-annotate-very-old-color nil)
     (vc-annotate-background (doom-color 'bg)))
 ;;;; --- END Package variables --------------
