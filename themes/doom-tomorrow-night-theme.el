@@ -61,6 +61,19 @@ determine the exact padding."
    (cyan       '("#8abeb7" "#8abeb7" "cyan"))
    (dark-cyan  (doom-darken cyan 0.4))
 
+   ;; Custom colors
+   (auburn '("#962727" "#962727" "auburn"))
+   (myrtle '("#417d80" "#417d80" "myrtle"))
+   (auburn2 (doom-lighten auburn 0.15))
+   (auburn3 (doom-lighten auburn 0.30))
+   (auburn4 (doom-lighten auburn 0.45))
+   (myrtle2 (doom-lighten myrtle 0.15))
+   (myrtle3 (doom-lighten myrtle 0.30))
+   (myrtle4 (doom-lighten myrtle 0.45))
+
+   (dark-violet   (doom-darken violet 0.1))
+   (d-dark-violet (doom-darken violet 0.4))
+
    ;; face categories
    (highlight      blue)
    (vertical-bar   base0)
@@ -106,14 +119,30 @@ determine the exact padding."
     :background modeline-bg-alt :foreground modeline-fg-alt
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt)))
 
+   ;; org headlines
+   ((outline-1 &override) :foreground auburn)
+   ((outline-2 &override) :foreground myrtle)
+   ((outline-3 &override) :foreground auburn2)
+   ((outline-4 &override) :foreground myrtle2)
+   ((outline-5 &override) :foreground auburn3)
+   ((outline-6 &override) :foreground myrtle3)
+   ((outline-7 &override) :foreground auburn4)
+   ((outline-8 &override) :foreground myrtle4)
+
+   ;; other org faces
+   ((org-code &override)             :foreground dark-violet)
+   ((org-block-begin-line &override) :foreground d-dark-violet)
+   ((org-document-title &override)   :foreground auburn)
+   ((org-document-info &override)    :foreground auburn)
+
    ;;;; rainbow-delimiters
-   (rainbow-delimiters-depth-1-face :foreground violet)
-   (rainbow-delimiters-depth-2-face :foreground blue)
-   (rainbow-delimiters-depth-3-face :foreground orange)
-   (rainbow-delimiters-depth-4-face :foreground green)
-   (rainbow-delimiters-depth-5-face :foreground magenta)
-   (rainbow-delimiters-depth-6-face :foreground yellow)
-   (rainbow-delimiters-depth-7-face :foreground teal)
+   ;; (rainbow-delimiters-depth-1-face :foreground violet)
+   ;; (rainbow-delimiters-depth-2-face :foreground blue)
+   ;; (rainbow-delimiters-depth-3-face :foreground orange)
+   ;; (rainbow-delimiters-depth-4-face :foreground green)
+   ;; (rainbow-delimiters-depth-5-face :foreground magenta)
+   ;; (rainbow-delimiters-depth-6-face :foreground yellow)
+   ;; (rainbow-delimiters-depth-7-face :foreground teal)
    ;;;; doom-modeline
    (doom-modeline-buffer-path       :foreground violet :bold bold)
    (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path))
