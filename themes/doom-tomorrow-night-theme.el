@@ -136,13 +136,15 @@ determine the exact padding."
    ((org-document-info &override)    :foreground auburn)
 
    ;;;; rainbow-delimiters
-   ;; (rainbow-delimiters-depth-1-face :foreground violet)
-   ;; (rainbow-delimiters-depth-2-face :foreground blue)
-   ;; (rainbow-delimiters-depth-3-face :foreground orange)
-   ;; (rainbow-delimiters-depth-4-face :foreground green)
-   ;; (rainbow-delimiters-depth-5-face :foreground magenta)
-   ;; (rainbow-delimiters-depth-6-face :foreground yellow)
-   ;; (rainbow-delimiters-depth-7-face :foreground teal)
+   (rainbow-delimiters-depth-1-face :foreground violet)
+   (rainbow-delimiters-depth-2-face :foreground blue)
+   (rainbow-delimiters-depth-3-face :foreground orange)
+   (rainbow-delimiters-depth-4-face :foreground green)
+   (rainbow-delimiters-depth-5-face :foreground magenta)
+   (rainbow-delimiters-depth-6-face :foreground yellow)
+   (rainbow-delimiters-depth-7-face :foreground dark-blue)
+   (rainbow-delimiters-depth-8-face :foreground auburn)
+   (rainbow-delimiters-depth-9-face :foreground myrtle)
    ;;;; doom-modeline
    (doom-modeline-buffer-path       :foreground violet :bold bold)
    (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path))
