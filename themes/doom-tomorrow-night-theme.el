@@ -72,7 +72,7 @@ determine the exact padding."
    (myrtle4 (doom-lighten myrtle 0.45))
 
    (dark-violet   (doom-darken violet 0.1))
-   (d-dark-violet (doom-darken violet 0.4))
+   (d-dark-violet (doom-darken violet 0.5))
 
    ;; face categories
    (highlight      blue)
