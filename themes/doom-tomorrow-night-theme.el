@@ -64,12 +64,12 @@ determine the exact padding."
    ;; Custom colors
    (auburn '("#962727" "#962727" "auburn"))
    (myrtle '("#417d80" "#417d80" "myrtle"))
-   (auburn2 (doom-lighten auburn 0.15))
-   (auburn3 (doom-lighten auburn 0.30))
-   (auburn4 (doom-lighten auburn 0.45))
-   (myrtle2 (doom-lighten myrtle 0.15))
-   (myrtle3 (doom-lighten myrtle 0.30))
-   (myrtle4 (doom-lighten myrtle 0.45))
+   (auburn2 (doom-lighten auburn 0.25))
+   (auburn3 (doom-lighten auburn 0.45))
+   (auburn4 (doom-lighten auburn 0.65))
+   (myrtle2 (doom-lighten myrtle 0.25))
+   (myrtle3 (doom-lighten myrtle 0.45))
+   (myrtle4 (doom-lighten myrtle 0.65))
 
    (dark-violet   (doom-darken violet 0.1))
    (d-dark-violet (doom-darken violet 0.5))
