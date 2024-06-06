@@ -79,7 +79,7 @@ determine the exact padding."
    (vertical-bar   base0)
    (selection      `(,(car (doom-lighten bg 0.1)) ,@(cdr base4)))
    (builtin        blue)
-   (comments       grey)
+   (comments       base6) ; previous: grey
    (doc-comments   (doom-lighten grey 0.14))
    (constants      orange)
    (functions      blue)
@@ -118,6 +118,9 @@ determine the exact padding."
    (mode-line-inactive
     :background modeline-bg-alt :foreground modeline-fg-alt
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt)))
+
+   ;; Italic comments
+   ((font-lock-comment-face &override) :foreground comments :italic t)
 
    ;; org headlines
    ((outline-1 &override) :foreground auburn)
