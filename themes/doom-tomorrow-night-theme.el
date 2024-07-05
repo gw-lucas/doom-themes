@@ -137,6 +137,7 @@ determine the exact padding."
    ((org-block-begin-line &override) :foreground d-dark-violet)
    ((org-document-title &override)   :foreground auburn)
    ((org-document-info &override)    :foreground auburn)
+   ((org-priority &override)         :foreground orange)
 
    ;;;; rainbow-delimiters
    (rainbow-delimiters-depth-1-face :foreground violet)
